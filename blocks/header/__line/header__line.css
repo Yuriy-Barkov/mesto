@@ -1,0 +1,8 @@
+.header__line {
+  width: 100%;
+  max-width: 880px;
+  height: 1px;
+  padding: 32px 0 0;
+  object-fit: cover;
+  align-self: center;
+}

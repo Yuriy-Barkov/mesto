@@ -1,0 +1,11 @@
+.element {
+  margin: 20px auto 0;
+  width: 88%;
+  display: grid;
+  grid-template-areas:
+    "mask mask"
+    "title like";
+  grid-template-columns: 80% 20%;
+  background-color: #FFF;
+  border-radius: 10px;
+}

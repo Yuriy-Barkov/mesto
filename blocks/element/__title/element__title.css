@@ -1,0 +1,6 @@
+.element__title {
+  margin: 25px 0 25px 21px;
+  grid-area: title;
+  font: normal 900 24px/29px 'Inter', Arial, sans-serif;
+  color: #000000;
+}
