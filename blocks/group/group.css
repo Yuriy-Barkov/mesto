@@ -3,3 +3,26 @@
   margin: 0 auto 0;
   padding: 16px 0 0 0;
 }
+
+@media screen and (min-width: 666px) {
+  .group {
+    display: grid;
+  }
+}
+
+@media screen and (min-width: 666px) and (max-width: 1024px) {
+  .group {
+    grid-template-columns: repeat(2, 48%);
+    gap: 10px 4%;
+    width: 93%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .group {
+    padding: 49px 0 0 0;
+    grid-template-columns: repeat(3, 32%);
+    gap: 21px 2%;
+    width: 69%;
+  }
+}

@@ -7,4 +7,21 @@
   background-repeat: no-repeat;
   background-position: center;
   margin: 33px auto 0;
+  grid-area: profile__add-button;
+  transition: opacity 2s ease;
+}
+
+.profile__add-button:hover {
+  opacity: .4;
+  transition: opacity .3s ease;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1025px) {
+  .profile__add-button {
+    width: 147px;
+    height: 45px;
+    margin: 34px -1px auto auto;
+    background-size: 20px 20px;
+  }
 }

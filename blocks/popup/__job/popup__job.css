@@ -1,0 +1,7 @@
+.popup__job {
+  font: normal 400 14px/17px 'Inter';
+  border: none;
+  padding: 0;
+  margin: 30px 25px 8px;
+  outline: none;
+}

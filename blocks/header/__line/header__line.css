@@ -6,3 +6,10 @@
   object-fit: cover;
   align-self: center;
 }
+
+@media screen and (min-width: 1025px) {
+  .header__line {
+    margin: 0 auto 0;
+    padding: 39px 0 0;
+  }
+}

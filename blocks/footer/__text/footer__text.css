@@ -3,3 +3,16 @@
   color: #545454;
   margin: 10px 10px 10px 19px;
 }
+
+@media screen and (min-width: 666px) and (max-width: 1024px) {
+  .footer__text {
+    margin: 10px 5%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .footer__text {
+    margin: 27px 15.6%;
+    font: normal 400 18px/22px 'Inter', Arial, sans-serif;
+  }
+}

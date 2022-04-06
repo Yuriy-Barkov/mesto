@@ -1,4 +1,11 @@
 .profile__name-block {
   display: flex;
-  margin: 26px 0 0 20%;
+  margin: 26px auto 0;
+  grid-area: profile__name-block;
+}
+
+@media screen and (min-width: 1025px) {
+  .profile__name-block {
+    margin: 20px auto 0 24px;
+  }
 }

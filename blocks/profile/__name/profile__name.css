@@ -1,7 +1,13 @@
 .profile__name {
-  font: normal 500 27px/33px 'Inter';
+  font: normal 500 27px/33px 'Inter', Arial, sans-serif;
   color: #FFF;
   text-align: center;
   padding: 0;
-  margin: 0%;
+  margin: 0;
+}
+
+@media screen and (min-width: 1025px) {
+  .profile__name {
+    font: normal 500 42px/48px 'Inter', Arial, sans-serif;
+  }
 }

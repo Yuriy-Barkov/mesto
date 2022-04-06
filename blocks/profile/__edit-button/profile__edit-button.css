@@ -7,4 +7,20 @@
   background-repeat: no-repeat;
   background-position: center;
   margin: 8px 0 0 11px;
+  transition: opacity 2s ease;
+}
+
+.profile__edit-button:hover {
+  opacity: .4;
+  transition: opacity .3s ease;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1025px) {
+  .profile__edit-button {
+    width: 22px;
+    height: 22px;
+    background-size: 12px 12px;
+    margin: 16px 0 0 19px;
+  }
 }

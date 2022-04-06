@@ -3,4 +3,7 @@
   grid-area: title;
   font: normal 900 24px/29px 'Inter', Arial, sans-serif;
   color: #000000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }

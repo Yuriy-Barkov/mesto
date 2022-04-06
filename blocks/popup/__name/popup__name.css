@@ -1,0 +1,8 @@
+.popup__name {
+  width: 85%;
+  font: normal 400 14px/17px 'Inter';
+  border: none;
+  padding: 0;
+  margin: 75px 25px 9px;
+  outline: none;
+}
