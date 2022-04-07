@@ -17,3 +17,9 @@
   transition: opacity .3s ease;
   cursor: pointer;
 }
+
+@media screen and (min-width: 666px) {
+  .popup__close {
+    margin: -36px -36px 0 auto;
+  }
+}
