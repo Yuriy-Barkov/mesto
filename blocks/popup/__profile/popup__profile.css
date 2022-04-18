@@ -1,0 +1,8 @@
+.popup__profile {
+  width: 85%;
+  font: normal 400 14px/17px 'Inter', Arial, sans-serif;
+  border: none;
+  padding: 0 0 10px 0;
+  outline: none;
+  border-bottom: 1px solid #b5b2b2;
+}

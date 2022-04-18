@@ -1,6 +1,7 @@
 @media screen and (min-width: 320px) and (max-width: 1024px) {
   .profile__block {
     display: grid;
+    width: 100%;
     grid-template-areas:
       "image"
       "profile__name-block"
@@ -17,6 +18,6 @@
     grid-template-areas:
       "image profile__name-block profile__add-button"
       "image profile__about profile__add-button";
-    grid-template-columns: 15% 64% 20%;
+    grid-template-columns: 15% 65% 20%;
   }
 }

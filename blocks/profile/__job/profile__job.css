@@ -1,16 +1,21 @@
 .profile__job {
-  margin: 8px 0 0;
+  margin: 8px auto 0;
   padding: 0;
-  font: normal 400 14px/17px 'Inter', Arial, sans-serif;
+  font: normal 400 14px/17px "Inter", Arial, sans-serif;
   text-align: center;
-  color: #FFF;
+  color: #fff;
   grid-area: profile__about;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 60vw;
 }
 
 @media screen and (min-width: 1025px) {
   .profile__job {
-    font: normal 400 18px/22px 'Inter', Arial, sans-serif;
+    font: normal 400 18px/22px "Inter", Arial, sans-serif;
     margin: auto 0 22px 24px;
     text-align: left;
+    max-width: 35vw;
   }
 }

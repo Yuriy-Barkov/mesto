@@ -1,11 +1,16 @@
 .popup__content {
-  width: 90%;
+  width: 88%;
   max-width: 430px;
-  min-height: 322px;
-  margin: 123px auto 0;
+  margin: auto;
   background-color: #FFF;
   color: #000;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (min-width: 666px) {
+  .popup__content {
+    margin: auto;
+  }
 }

@@ -13,7 +13,6 @@
 
     <header class="header">
       <img class="header__logo" alt="Логотип Место" src="images/Logo.svg">
-      <img class="header__line" alt="Линия" src="images/Line.svg">
     </header>
 
     <main class="content">
@@ -22,10 +21,10 @@
           <img class="profile__image" alt="Аватар профиля" src="images/image.png">
           <div class="profile__name-block">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
-            <div class="profile__edit-button"></div>
+            <button type="button" class="profile__edit-button"></button>
           </div>
           <p class="profile__job">Исследователь океана</p>
-          <div class="profile__add-button"></div>
+          <button type="button" class="profile__add-button"></button>
         </div>
       </section>
 
@@ -33,37 +32,37 @@
         <div class="element">
           <img class="element__mask" alt="Карачаевск" src="images/kirill-pershin-1088404-unsplash.png">
           <h2 class="element__title">Карачаевск</h2>
-          <img class="element__like" alt="Нравится" src="images/like.svg">
+          <button type="button" class="element__like"></button>
         </div>
 
         <div class="element">
           <img class="element__mask" alt="Гора Эльбрус" src="images/kirill-pershin-1556355-unsplash.png">
           <h2 class="element__title">Гора Эльбрус</h2>
-          <img class="element__like" alt="Нравится" src="images/like.svg">
+          <button type="button" class="element__like"></button>
         </div>
 
         <div class="element">
           <img class="element__mask" alt="Карачаевск" src="images/kirill-pershin-1088404-unsplash.png">
           <h2 class="element__title">Карачаевск</h2>
-          <img class="element__like" alt="Нравится" src="images/like.svg">
+          <button type="button" class="element__like"></button>
         </div>
 
         <div class="element">
           <img class="element__mask" alt="Гора Эльбрус" src="images/kirill-pershin-1556355-unsplash.png">
           <h2 class="element__title">Гора Эльбрус</h2>
-          <img class="element__like" alt="Нравится" src="images/like.svg">
+          <button type="button" class="element__like"></button>
         </div>
 
         <div class="element">
           <img class="element__mask" alt="Карачаевск" src="images/kirill-pershin-1088404-unsplash.png">
           <h2 class="element__title">Карачаевск</h2>
-          <img class="element__like" alt="Нравится" src="images/like.svg">
+          <button type="button" class="element__like"></button>
         </div>
 
         <div class="element">
           <img class="element__mask" alt="Гора Эльбрус" src="images/kirill-pershin-1556355-unsplash.png">
           <h2 class="element__title">Гора Эльбрус</h2>
-          <img class="element__like" alt="Нравится" src="images/like.svg">
+          <button type="button" class="element__like"></button>
         </div>
       </section>
     </main>
@@ -73,17 +72,15 @@
     </footer>
 
     <div class="popup">
-      <form>
-        <div class="popup__content">
-          <button class="popup__close" type="button"></button>
+      <div class="popup__content">
+        <button class="popup__close" type="button"></button>
+        <form name="popup__form">
           <h3 class="popup__title">Редактировать профиль</h3>
-          <input class="popup__name" name="name" autocomplete="off">
-          <img class="popup__line" alt="Линия" src="images/popup-line.svg">
-          <input class="popup__job" name="job" autocomplete="off">
-          <img class="popup__line" alt="Линия" src="images/popup-line.svg">
+          <input class="popup__profile popup__profile_name" name="name" autocomplete="off">
+          <input class="popup__profile popup__profile_job" name="job" autocomplete="off">
           <button class="popup__save" type="submit">Сохранить</button>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
 
   </div>

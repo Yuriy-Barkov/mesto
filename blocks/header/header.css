@@ -4,3 +4,24 @@
   flex-direction: column;
   padding-top: 28px;
 }
+
+.header::after {
+  content: "";
+    border-bottom: 1px solid #545454;
+    width: 100%;
+    opacity: .7;
+    padding: 21px 0 10px 0;
+    margin: 0 auto 0;
+}
+
+@media screen and (min-width: 666px) and (max-width: 1024px) {
+  .header::after {
+    width: 93%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .header::after {
+    width: 69%;
+  }
+}
