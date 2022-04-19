@@ -12,7 +12,7 @@
 
 @media screen and (min-width: 1025px) {
   .footer__text {
-    margin: 27px 15.6%;
+    margin: 27px 0;
     font: normal 400 18px/22px 'Inter', Arial, sans-serif;
   }
 }

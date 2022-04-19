@@ -1,12 +1,12 @@
 const editButton = document.querySelector('.profile__edit-button'),
   modalWindow = document.querySelector('.popup'),
   modalCloseBtn = modalWindow.querySelector('.popup__close'),
-  nameInput = document.querySelector('.popup__profile_name'),
-  jobInput = document.querySelector('.popup__profile_job'),
+  nameInput = document.querySelector('.popup__profile_input_name'),
+  jobInput = document.querySelector('.popup__profile_input_job'),
   profileName = document.querySelector('.profile__name'),
   profileJob = document.querySelector('.profile__job');
 
-let formElement = document.querySelector('form');
+let formElement = document.querySelector('.popup__form');
 
 function formSubmitHandler (event) {
   event.preventDefault();

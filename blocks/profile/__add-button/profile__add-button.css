@@ -3,7 +3,7 @@
   height: 49px;
   border: 2px solid #FFF;
   border-radius: 2px;
-  background-color: #000;
+  background-color: transparent;
   background-image: url(../../../images/plus.svg);
   background-size: 17px 17px;
   background-repeat: no-repeat;
@@ -23,7 +23,7 @@
   .profile__add-button {
     width: 148px;
     height: 49px;
-    margin: 34px -2px auto auto;
+    margin: 34px 10px auto auto;
     background-size: 20px 20px;
   }
 }

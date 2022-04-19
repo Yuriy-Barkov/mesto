@@ -21,7 +21,15 @@
 }
 
 @media screen and (min-width: 1025px) {
-  .header::after {
+  .header {
     width: 69%;
+    max-width: 884px;
+    margin: 0 auto 0;
+  }
+
+  .header::after {
+    /* width: 100%;
+    max-width: 884px; */
+    padding: 29px 0 10px 0;
   }
 }
