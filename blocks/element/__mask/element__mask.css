@@ -2,4 +2,10 @@
   grid-area: mask;
   width: 100%;
   border-radius: 10px 10px 0 0;
+  height: 282px;
+  object-fit: cover;
+}
+
+.element__mask:hover {
+  cursor: pointer;
 }

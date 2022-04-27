@@ -1,0 +1,7 @@
+.image-popup_opened {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .5s ease;
+  display: flex;
+  flex-direction: column;
+}
