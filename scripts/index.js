@@ -10,11 +10,11 @@ const editButton = document.querySelector(".profile__edit-button"),
   imageCloseBtn = document.querySelector(".image-popup__close"),
   imageTitle = document.querySelector(".image-popup__title"),
   imageImg = document.querySelector(".image-popup__mask"),
-  imagePopup = document.querySelector(".image-popup");
+  imagePopup = document.querySelector(".image-popup"),
+  formElement = document.querySelector(".popup__form");
 
-let imgimgimg = '';
-let tititle = '';
-let formElement = document.querySelector(".popup__form");
+let imagePopupLink = '',
+  imagePopupTitle = '';
 
 document.addEventListener("DOMContentLoaded", () => {
   addCards();
@@ -47,34 +47,22 @@ const initialCards = [
   },
 ];
 
-let addElement = (name, link, index) => {
-  let div = document.createElement("div");
-  let h2 = document.createElement("h2");
-  let img = document.createElement("img");
-  let like = document.createElement("button");
-  let trash = document.createElement("button");
-  div.classList.add("element");
-  h2.textContent = name;
-  h2.classList.add("element__title");
-  img.classList.add("element__mask");
-  img.src = link;
-  img.alt = name;
-  like.classList.add("element__like");
-  like.type = 'button';
-  trash.classList.add("element__trash");
-  trash.type = 'button';
-  trash.id = index;
-  div.append(h2);
-  div.append(img);
-  div.append(like);
-  div.append(trash);
-  groupElement.append(div);
-};
+function addElement(item) {
+  const appendSection = document.querySelector('.group');
+  const elementTemplate = document.querySelector('.templateContainer');
+  const element = elementTemplate.content.cloneNode(true);
+  const trashButton = element.querySelector('.element__trash');
+  element.querySelector('.element__mask').src = item.link;
+  element.querySelector('.element__mask').alt = item.name;
+  element.querySelector('.element__title').textContent = item.name;
+  appendSection.append(element);
+  trashButton.addEventListener('click', removeElement);
+}
 
 function addCards() {
   groupElement.textContent = '';
-  initialCards.forEach(function (item, index) {
-    addElement(item.name, item.link, index);
+  initialCards.forEach(function(item) {
+    addElement(item);
   });
 }
 
@@ -86,12 +74,8 @@ function addObject() {
   addCards();
 }
 
-function removeObject(index) {
-  initialCards.splice(index, 1);
-}
-
-function formSubmitHandler(event) {
-  event.preventDefault();
+function formSubmitHandler(evt) {
+  evt.preventDefault();
   let btn = modalWindow.querySelector(".popup__save");
   if (btn.classList.contains("edit")) {
     profileName.textContent = nameInput.value;
@@ -130,30 +114,31 @@ function toggleModalWindow(type = 'edit') {
 function toggleImagePopup() {
   imagePopup.classList.toggle("image-popup_opened");
   if (imagePopup.classList.contains("image-popup_opened")) {
-    imagePopup.querySelector(".image-popup__mask").src = imgimgimg;
-    imagePopup.querySelector(".image-popup__title").textContent = tititle;
+    imagePopup.querySelector(".image-popup__mask").src = imagePopupLink;
+    imagePopup.querySelector(".image-popup__title").textContent = imagePopupTitle;
   }
 }
 
-function toggleFill(evt) {
+function handleElement(evt) {
   let el = evt.target;
   if (el.classList.contains("element__like")) {
     el.classList.toggle("element__like_active");
   }
-  if (el.classList.contains("element__trash")) {
-    removeObject(el.id);
-    addCards();
-  }
   if (el.classList.contains("element__mask")) {
-    imgimgimg = el.src;
-    tititle = el.alt;
+    imagePopupLink = el.src;
+    imagePopupTitle = el.alt;
     toggleImagePopup();
   }
+}
+
+function removeElement(evt) {
+  const removeEl = evt.target.closest('.element');
+    removeEl.remove();
 }
 
 formElement.addEventListener("submit", formSubmitHandler);
 editButton.addEventListener("click", toggleModalWindow.bind(this, 'edit'));
 modalCloseBtn.addEventListener("click", () => toggleModalWindow('close'));
-groupElement.addEventListener("click", toggleFill);
+groupElement.addEventListener("click", handleElement);
 addButton.addEventListener("click", toggleModalWindow.bind(this, 'add'));
 imageCloseBtn.addEventListener("click", toggleImagePopup);
